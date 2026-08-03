@@ -1,0 +1,17 @@
+{
+  "short_name": "Amigos Exams",
+  "name": "Amigos SACCO — AI-Proctored Examination System",
+  "description": "Secure assessment and verifiable digital certification for Amigos Saving & Credit Cooperative Society Ltd.",
+  "lang": "en",
+  "dir": "ltr",
+  "icons": [
+    { "src": "favicon.ico", "sizes": "16x16 24x24 32x32 48x48 64x64", "type": "image/x-icon" },
+    { "src": "apple-touch-icon.png", "type": "image/png", "sizes": "180x180" },
+    { "src": "logo192.png", "type": "image/png", "sizes": "192x192", "purpose": "any" },
+    { "src": "logo512.png", "type": "image/png", "sizes": "512x512", "purpose": "any maskable" }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#323D89",
+  "background_color": "#F7F9FC"
+}

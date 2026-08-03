@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- ================= Amigos SACCO brand chrome ================= -->
+    <!-- Deep blue owns browser/OS chrome; orange is reserved for actions
+         inside the app, per the 70/30 rule. -->
+    <meta name="theme-color" content="#323D89" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" sizes="any" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/apple-touch-icon.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <title>Amigos SACCO — AI-Proctored Examination System</title>
+    <meta
+      name="description"
+      content="Secure, AI-proctored assessment and verifiable digital certification for Amigos Saving & Credit Cooperative Society Ltd."
+    />
+
+    <!-- Open Graph / social preview. Shared certificate links render a branded
+         card rather than a bare URL. -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Amigos SACCO" />
+    <meta property="og:title" content="Amigos SACCO — AI-Proctored Examination System" />
+    <meta
+      property="og:description"
+      content="Secure assessment. Verified competence. Certificates issued by the Amigos SACCO PMERLF Directorate can be verified by anyone, without an account."
+    />
+    <meta property="og:image" content="%PUBLIC_URL%/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="%PUBLIC_URL%/og-image.png" />
+
+    <!-- Type. Plus Jakarta Sans carries the interface; the Ethiopic families
+         carry Amharic so a bilingual line does not change weight mid-sentence,
+         and so Amharic renders correctly in exported PDF certificates
+         (functional point FP-10.3). -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+Ethiopic:wght@400;500;600;700&family=Noto+Serif+Ethiopic:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* Pre-hydration paint. Without this the first frame flashes the browser
+         default white/blue before the MUI theme mounts. */
+      html,
+      body {
+        margin: 0;
+        background: #f7f9fc;
+        color: #232b61;
+        font-family: 'Plus Jakarta Sans', 'Noto Sans Ethiopic', 'Segoe UI', Helvetica, Arial,
+          sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+      /* The 70/30 rule, pinned to the top of the document while React boots. */
+      #brand-boot-rule {
+        height: 3px;
+        background: linear-gradient(90deg, #ed7b2b 0%, #ed7b2b 70%, #323d89 70%, #323d89 100%);
+      }
+      ::selection {
+        background: #fdecde;
+        color: #232b61;
+      }
+      /* Amharic script gets its own family without needing a class on every
+         element that happens to contain it. */
+      :lang(am) {
+        font-family: 'Noto Sans Ethiopic', 'Plus Jakarta Sans', sans-serif;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          animation-duration: 0.01ms !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>
+      This examination system requires JavaScript. Enable it in your browser settings, then reload
+      the page. If you were mid-attempt, your answers were saved as you selected them.
+    </noscript>
+    <div id="brand-boot-rule"></div>
+    <div id="root"></div>
+  </body>
+</html>

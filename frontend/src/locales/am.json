@@ -1,0 +1,63 @@
+{
+  "nav": {
+    "dashboard": "ዳሽቦርድ",
+    "exams": "ፈተናዎች",
+    "result": "ውጤት",
+    "createExam": "ፈተና ፍጠር",
+    "addQuestions": "ጥያቄዎችን ጨምር",
+    "examLogs": "የፈተና መዝገቦች",
+    "analytics": "የቅርንጫፍ እና የመምሪያ ትንተና",
+    "certificates": "የምስክር ወረቀቶች እና ባጆች"
+  },
+  "common": {
+    "submit": "አስገባ",
+    "cancel": "ሰርዝ",
+    "save": "አስቀምጥ",
+    "loading": "በመጫን ላይ...",
+    "hello": "ሰላም"
+  },
+  "exam": {
+    "instructions": "የፈተና መመሪያዎች",
+    "duration": "ቆይታ",
+    "questionsRemaining": "የቀሩ ጥያቄዎች",
+    "submitTest": "ፈተና አስገባ",
+    "timeRemaining": "የቀረ ጊዜ",
+    "faceNotVisible": "ፊት አይታይም",
+    "warningRecorded": "ማስጠንቀቂያ ተመዝግቧል",
+    "multipleFacesDetected": "ብዙ ፊቶች ተገኝተዋል",
+    "cellPhoneDetected": "ስልክ ተገኝቷል",
+    "prohibitedObjectDetected": "የተከለከለ ዕቃ ተገኝቷል",
+    "tabSwitchDetected": "ትር መቀያየር ተገኝቷል",
+    "copyPasteDisabled": "መቅዳት/መለጠፍ ተሰናክሏል",
+    "fullscreenExited": "ሙሉ ገጽ ተዘግቷል"
+  },
+  "auth": {
+    "signIn": "ግባ",
+    "signUp": "ተመዝገብ",
+    "name": "ስም",
+    "email": "የኢሜይል አድራሻ",
+    "password": "የይለፍ ቃል",
+    "confirmPassword": "የይለፍ ቃል አረጋግጥ",
+    "role": "ሚና",
+    "branch": "ቅርንጫፍ",
+    "department": "መምሪያ"
+  },
+  "certificate": {
+    "title": "የእኔ የምስክር ወረቀቶች እና ባጆች",
+    "earned": "የተገኙ የምስክር ወረቀቶች",
+    "view": "እይ እና አጋራ",
+    "download": "PDF አውርድ",
+    "saveImage": "እንደ ምስል አስቀምጥ",
+    "share": "ስኬትህን አጋራ",
+    "verified": "የተረጋገጠ እና ትክክለኛ",
+    "revoked": "የተሰረዘ",
+    "serial": "ተከታታይ ቁጥር",
+    "issued": "የተሰጠበት",
+    "scanToVerify": "ለማረጋገጥ ስካን አድርግ",
+    "getCertificate": "የምስክር ወረቀት",
+    "notEligible": "ብቁ አይደለም",
+    "verifyTitle": "የምስክር ወረቀት ማረጋገጫ",
+    "valid": "ትክክለኛ",
+    "invalid": "አልተረጋገጠም"
+  }
+}

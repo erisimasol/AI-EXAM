@@ -1,0 +1,24 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "https://ai-proctored-system.onrender.com/api/:path*"
+    },
+    {
+      "source": "/run-python",
+      "destination": "https://ai-proctored-system.onrender.com/run-python"
+    },
+    {
+      "source": "/run-java",
+      "destination": "https://ai-proctored-system.onrender.com/run-java"
+    },
+    {
+      "source": "/run-javascript",
+      "destination": "https://ai-proctored-system.onrender.com/run-javascript"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}

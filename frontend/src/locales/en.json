@@ -1,0 +1,63 @@
+{
+  "nav": {
+    "dashboard": "Dashboard",
+    "exams": "Exams",
+    "result": "Result",
+    "createExam": "Create Exam",
+    "addQuestions": "Add Questions",
+    "examLogs": "Exam Logs",
+    "analytics": "Branch & Department Analytics",
+    "certificates": "Certificates & Badges"
+  },
+  "common": {
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "save": "Save",
+    "loading": "Loading...",
+    "hello": "Hello"
+  },
+  "exam": {
+    "instructions": "Exam Instructions",
+    "duration": "Duration",
+    "questionsRemaining": "Questions Remaining",
+    "submitTest": "Submit Test",
+    "timeRemaining": "Time Remaining",
+    "faceNotVisible": "Face Not Visible",
+    "warningRecorded": "Warning Recorded",
+    "multipleFacesDetected": "Multiple Faces Detected",
+    "cellPhoneDetected": "Cell Phone Detected",
+    "prohibitedObjectDetected": "Prohibited Object Detected",
+    "tabSwitchDetected": "Tab Switch Detected",
+    "copyPasteDisabled": "Copy/Paste Disabled",
+    "fullscreenExited": "Fullscreen Exited"
+  },
+  "auth": {
+    "signIn": "Sign In",
+    "signUp": "Sign Up",
+    "name": "Name",
+    "email": "Email Address",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "role": "Role",
+    "branch": "Branch",
+    "department": "Department"
+  },
+  "certificate": {
+    "title": "My Certificates & Badges",
+    "earned": "Certificates Earned",
+    "view": "View & Share",
+    "download": "Download PDF",
+    "saveImage": "Save as image",
+    "share": "Share your achievement",
+    "verified": "Verified & authentic",
+    "revoked": "Revoked",
+    "serial": "Serial No",
+    "issued": "Issued",
+    "scanToVerify": "Scan to verify",
+    "getCertificate": "Certificate",
+    "notEligible": "Not eligible",
+    "verifyTitle": "Certificate Verification",
+    "valid": "VALID",
+    "invalid": "Not Verified"
+  }
+}
