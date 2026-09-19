@@ -22,8 +22,7 @@ import CertificateBadge from '../components/certificate/CertificateBadge';
 import { BRAND, GRADIENTS, ORG, STATUS } from '../theme/brand';
 
 const ORANGE = BRAND.orange;
-// (BLUE is available as BRAND.blue where needed — the page's authority colour now
-// comes from the theme and the AmigosLogo component rather than a local const.)
+// (BLUE is available as BRAND.blue where needed.)
 
 const fmtDate = (d) =>
   d

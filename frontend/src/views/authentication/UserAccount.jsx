@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { Grid, Box, Card, Typography, Stack } from '@mui/material';
 import { Link, useNavigate } from 'react-router-dom';
 import PageContainer from 'src/components/container/PageContainer';
-import Logo from 'src/layouts/full/shared/logo/Logo';
 import { useFormik } from 'formik';
 import * as yup from 'yup';
 
