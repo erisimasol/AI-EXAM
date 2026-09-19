@@ -20,7 +20,6 @@ import { useTranslation } from 'react-i18next';
 import Profile from './Profile';
 import { IconBellRinging, IconMenu } from '@tabler/icons-react';
 import { useSelector } from 'react-redux';
-import AmigosLogo from 'src/components/brand/AmigosLogo';
 import { BRAND, GRADIENTS, ORG } from 'src/theme/brand';
 
 const Header = (props) => {
@@ -80,7 +79,6 @@ const Header = (props) => {
         {/* Identity anchor. On the exam layout there is no sidebar, so this is
             the only place the candidate sees who is invigilating them. */}
         <Stack direction="row" spacing={1} alignItems="center" sx={{ mr: 1 }}>
-          <AmigosLogo variant="mark" height={28} />
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             <Typography
               variant="h6"

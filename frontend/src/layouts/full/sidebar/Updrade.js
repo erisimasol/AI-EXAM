@@ -1,7 +1,6 @@
 import React from 'react';
 import { Box, Typography, Button, Stack } from '@mui/material';
 import { IconShieldCheck } from '@tabler/icons-react';
-import AmigosLogo from 'src/components/brand/AmigosLogo';
 import { BRAND, ORG } from 'src/theme/brand';
 
 // Replaces the vendor template's "Upgrade" upsell. The foot of the sidebar is
@@ -37,7 +36,6 @@ export const SupportCard = () => (
       Contact PMERLF
     </Button>
     <Box mt={2} display="flex" alignItems="center" gap={0.75}>
-      <AmigosLogo variant="mark" height={16} />
       <Typography variant="caption" sx={{ color: BRAND.inkFaint }}>
         Issued by {ORG.shortName}
       </Typography>

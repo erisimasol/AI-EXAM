@@ -2,7 +2,6 @@ import { useRef } from 'react';
 import PropTypes from 'prop-types';
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
-import AmigosLogo from './brand/AmigosLogo';
 import { BRAND, FONTS, GRADIENTS, ORG } from '../theme/brand';
 
 // Lightweight certificate used where the full credential record (serial, QR,
@@ -40,9 +39,6 @@ const Certificate = ({ studentName, examName, score, date }) => {
         <div style={{ height: '8px', background: GRADIENTS.brandBar }} />
 
         <div style={{ padding: '28px 48px 40px' }}>
-          <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '4px' }}>
-            <AmigosLogo variant="full" height={86} />
-          </div>
           <p style={{ fontSize: '13px', color: BRAND.inkMuted, margin: '0 0 22px' }}>{ORG.unit}</p>
 
           <h1
@@ -105,7 +101,6 @@ const Certificate = ({ studentName, examName, score, date }) => {
               </div>
               <div style={{ fontSize: '10px', color: BRAND.inkMuted }}>{ORG.shortName}</div>
             </div>
-            <AmigosLogo variant="seal" height={92} />
             <div style={{ textAlign: 'right', fontSize: '12px', color: BRAND.inkMuted }}>
               Date: <strong style={{ color: BRAND.blue }}>{date}</strong>
               <div style={{ fontSize: '10px', marginTop: '4px' }}>Preview — not a verifiable credential</div>

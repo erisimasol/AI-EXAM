@@ -3,7 +3,6 @@ import { Grid, Box, Card, Typography, Stack } from '@mui/material';
 import { Link, useNavigate } from 'react-router-dom';
 import PageContainer from 'src/components/container/PageContainer';
 import { GRADIENTS, BRAND, ORG } from 'src/theme/brand';
-import AmigosLogo from 'src/components/brand/AmigosLogo';
 import AuthRegister from './auth/AuthRegister';
 import { useFormik } from 'formik';
 import * as yup from 'yup';
@@ -122,7 +121,6 @@ const Register = () => {
           >
             <Card elevation={9} sx={{ p: 2, zIndex: 1, width: '100%', maxWidth: '500px' }}>
               <Box display="flex" flexDirection="column" alignItems="center" mb={1}>
-                <AmigosLogo variant="lockup" height={52} />
                 <Box
                   sx={{
                     width: 180,

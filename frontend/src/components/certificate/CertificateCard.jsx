@@ -4,7 +4,6 @@ import { Box, Button, Stack, CircularProgress, Chip } from '@mui/material';
 import { IconDownload, IconPhoto, IconDiscountCheck } from '@tabler/icons-react';
 import CertificateBadge, { TIER_META } from './CertificateBadge';
 import { buildVerifyUrl, generateQrDataUrl } from '../../utils/qrcode';
-import AmigosLogo from '../brand/AmigosLogo';
 import { BRAND, FONTS, GRADIENTS, ORG } from '../../theme/brand';
 
 const ORANGE = BRAND.orange;
@@ -155,22 +154,6 @@ const CertificateCard = ({ certificate }) => {
           </Box>
         ))}
 
-        {/* Watermark — the rings mark, ghosted, as a security tint */}
-        <Box
-          sx={{
-            position: 'absolute',
-            inset: 0,
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            opacity: 0.06,
-            userSelect: 'none',
-            pointerEvents: 'none',
-          }}
-        >
-          <AmigosLogo variant="full" height={340} />
-        </Box>
-
         {/* Content */}
         <Box
           sx={{
@@ -183,11 +166,6 @@ const CertificateCard = ({ certificate }) => {
             textAlign: 'center',
           }}
         >
-          {/* Issuing identity */}
-          <Box display="flex" justifyContent="center" mb={0.75}>
-            <AmigosLogo variant="full" height={86} />
-          </Box>
-
           <Box sx={{ fontFamily: FONTS.document, color: BLUE, fontWeight: 700, fontSize: '1.05rem' }}>
             {org.name || ORG.name}
           </Box>
@@ -265,7 +243,6 @@ const CertificateCard = ({ certificate }) => {
             />
 
             <Box display="flex" alignItems="flex-end" gap={1.25} sx={{ transform: 'translateY(6px)' }}>
-              <AmigosLogo variant="seal" height={78} />
               <CertificateBadge
                 tier={certificate.badgeTier}
                 percentage={certificate.percentage}

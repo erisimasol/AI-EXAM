@@ -4,7 +4,6 @@ import { Grid, Box, Card, Stack, Typography } from '@mui/material';
 
 import PageContainer from 'src/components/container/PageContainer';
 import { GRADIENTS, BRAND, ORG } from 'src/theme/brand';
-import AmigosLogo from 'src/components/brand/AmigosLogo';
 import AuthLogin from './auth/AuthLogin';
 
 import { useFormik } from 'formik';
@@ -101,7 +100,6 @@ const Login = () => {
           >
             <Card elevation={9} sx={{ p: 4, zIndex: 1, width: '100%', maxWidth: '500px' }}>
               <Box display="flex" flexDirection="column" alignItems="center" mb={1}>
-                <AmigosLogo variant="lockup" height={52} />
                 <Box
                   sx={{
                     width: 180,

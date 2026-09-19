@@ -1,5 +1,4 @@
 import { useMediaQuery, Box, Drawer, Typography } from '@mui/material';
-import Logo from '../shared/logo/Logo';
 import SidebarItems from './SidebarItems';
 import { SupportCard } from './Updrade';
 import { GRADIENTS, BRAND, ORG } from 'src/theme/brand';
@@ -10,8 +9,7 @@ import { GRADIENTS, BRAND, ORG } from 'src/theme/brand';
 // it encodes the brand ratio while doing it.
 const SidebarBrand = ({ compact = false }) => (
   <Box sx={{ px: compact ? 2 : 3, pt: 2.5, pb: 1.5, width: '100%' }}>
-    <Logo height={compact ? 38 : 44} />
-    <Box sx={{ height: 3, borderRadius: 1, background: GRADIENTS.brandBar, mt: 1.5 }} />
+    <Box sx={{ height: 3, borderRadius: 1, background: GRADIENTS.brandBar }} />
     <Typography
       variant="overline"
       component="p"

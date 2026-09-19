@@ -19,7 +19,6 @@ import {
 } from '@tabler/icons-react';
 import axiosInstance from '../axios';
 import CertificateBadge from '../components/certificate/CertificateBadge';
-import AmigosLogo from '../components/brand/AmigosLogo';
 import { BRAND, GRADIENTS, ORG, STATUS } from '../theme/brand';
 
 const ORANGE = BRAND.orange;
@@ -166,12 +165,6 @@ const CertificateVerify = () => {
           <Row label="Issued On" value={fmtDate(c.issuedAt)} />
           <Row label="Issuing Body" value={c.org?.name || ORG.name} />
 
-          {!revoked && (
-            <Box display="flex" justifyContent="center" mt={2}>
-              <AmigosLogo variant="seal" height={96} />
-            </Box>
-          )}
-
           {revoked && (
             <Typography variant="body2" color="error" mt={2} textAlign="center">
               {data.message}
@@ -196,7 +189,6 @@ const CertificateVerify = () => {
         {/* Brand bar. This page is the trust surface an outside verifier lands
             on, so the identity is stated in full, not abbreviated. */}
         <Box display="flex" flexDirection="column" alignItems="center" mb={2.5}>
-          <AmigosLogo variant="lockup" height={50} />
           <Box
             sx={{ width: 240, height: 3, borderRadius: 1, background: GRADIENTS.brandBar, my: 1.5 }}
           />
