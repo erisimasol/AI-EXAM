@@ -18,9 +18,20 @@ const getExams = asyncHandler(async (req, res) => {
 // @desc Create a new exam
 // @route POST /api/exams
 // @access Private (admin)
+const getExamById = asyncHandler(async (req, res) => {
+  const { examId } = req.params;
+  const exam = await Exam.findOne({ examId });
+  if (!exam) {
+    res.status(404);
+    throw new Error("Exam not found");
+  }
+  res.status(200).json(exam);
+});
+
 const createExam = asyncHandler(async (req, res) => {
   const {
     examName,
+    description,
     totalQuestions,
     duration,
     liveDate,
@@ -35,6 +46,7 @@ const createExam = asyncHandler(async (req, res) => {
 
   const exam = new Exam({
     examName,
+    description,
     totalQuestions,
     duration,
     liveDate,
@@ -69,4 +81,4 @@ const DeleteExamById = asyncHandler(async (req, res) => {
   res.status(200).json(exam);
 });
 
-export { getExams, createExam, DeleteExamById };
+export { getExams, getExamById, createExam, DeleteExamById };

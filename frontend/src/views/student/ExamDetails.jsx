@@ -1,4 +1,5 @@
 import {
+  Box,
   Button,
   Card,
   CardContent,
@@ -19,7 +20,8 @@ import * as React from 'react';
 import { useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import { useGetQuestionsQuery } from 'src/slices/examApiSlice';
+import { useGetExamByIdQuery, useGetQuestionsQuery } from 'src/slices/examApiSlice';
+import { BRAND, GRADIENTS, ORG } from 'src/theme/brand';
 
 function Copyright(props) {
   return (
@@ -38,8 +40,9 @@ const DescriptionAndInstructions = () => {
   const navigate = useNavigate();
 
   const { examId } = useParams();
+  const { data: exam } = useGetExamByIdQuery(examId); // Fetch exam metadata using examId
   const { data: questions, isLoading } = useGetQuestionsQuery(examId); // Fetch questions using examId
-  // const { data: questions, isLoading } = useGetQuestionsQuery({ examId });
+  const totalQuestions = questions?.length ?? exam?.totalQuestions;
 
   // fech exam data from backend
   // pass testUnique id on start button
@@ -65,18 +68,17 @@ const DescriptionAndInstructions = () => {
   return (
     <Card>
       <CardContent>
-        <Typography variant="h2" mb={3}>
-          Description
+        <Typography variant="h2" mb={1}>
+          {exam?.examName || 'Exam'}
         </Typography>
-        <Typography>
-          This practice test will allow you to measure your Python skills at the beginner level by
-          the way of various multiple choice questions. We recommend you to score at least 75% in
-          this test before moving to the next level questionnaire. It will help you in identifying
-          your strength and development areas. Based on the same you can plan your next steps in
-          learning Python and preparing for job placements.
+        {(exam?.department || exam?.difficultyLevel) && (
+          <Typography variant="overline" sx={{ color: BRAND.inkMuted }}>
+            {[exam?.department, exam?.difficultyLevel].filter(Boolean).join(' • ')}
+          </Typography>
+        )}
+        <Typography mt={2}>
+          {exam?.description || 'No description has been provided for this exam.'}
         </Typography>
-
-        <Typography>#Python #Coding #Software #MCQ #Beginner #Programming Language</Typography>
 
         <>
           <Typography variant="h3" mb={3} mt={3}>
@@ -94,8 +96,8 @@ const DescriptionAndInstructions = () => {
               <li>
                 <ListItemText>
                   <Typography variant="body1">
-                    There are a total of <strong>40 questions.</strong> Test Duration is{' '}
-                    <strong>30 minutes.</strong>
+                    There are a total of <strong>{totalQuestions ?? '—'} questions.</strong> Test
+                    Duration is <strong>{exam?.duration ?? '—'} minutes.</strong>
                   </Typography>
                 </ListItemText>
               </li>
@@ -184,9 +186,6 @@ const DescriptionAndInstructions = () => {
   );
 };
 
-const imgUrl =
-  'https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80';
-
 export default function ExamDetails() {
   return (
     <>
@@ -197,14 +196,23 @@ export default function ExamDetails() {
           sm={4}
           md={7}
           sx={{
-            backgroundImage: `url(${imgUrl})`, // 'url(https://source.unsplash.com/random?wallpapers)',
-            backgroundRepeat: 'no-repeat',
-            backgroundColor: (t) =>
-              t.palette.mode === 'light' ? t.palette.grey[50] : t.palette.grey[900],
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
+            background: GRADIENTS.panel,
+            display: { xs: 'none', sm: 'flex' },
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            textAlign: 'center',
+            px: 6,
           }}
-        />
+        >
+          <Typography variant="h3" sx={{ color: '#fff', mb: 1.5 }}>
+            {ORG.shortName}
+          </Typography>
+          <Box sx={{ width: 120, height: 3, borderRadius: 1, background: GRADIENTS.brandBar, mb: 2 }} />
+          <Typography variant="subtitle1" sx={{ color: BRAND.blueTint }}>
+            {ORG.tagline}
+          </Typography>
+        </Grid>
         <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
           <DescriptionAndInstructions />
         </Grid>

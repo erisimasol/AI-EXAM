@@ -21,6 +21,13 @@ export const examApiSlice = apiSlice.injectEndpoints({
         body: data,
       }),
     }),
+    // Get a single exam's details (name, description, duration, etc.)
+    getExamById: builder.query({
+      query: (examId) => ({
+        url: `${EXAMS_URL}/exam/${examId}`,
+        method: 'GET',
+      }),
+    }),
     // Get questions for a specific exam
     getQuestions: builder.query({
       query: (examId) => ({
@@ -62,6 +69,7 @@ export const examApiSlice = apiSlice.injectEndpoints({
 // Export the generated hooks for each endpoint
 export const {
   useGetExamsQuery,
+  useGetExamByIdQuery,
   useCreateExamMutation,
   useGetQuestionsQuery,
   useCreateQuestionMutation,

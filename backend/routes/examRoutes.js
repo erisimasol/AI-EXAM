@@ -4,6 +4,7 @@ import { protect } from "../middleware/authMiddleware.js";
 import {
   createExam,
   DeleteExamById,
+  getExamById,
   getExams,
 } from "../controllers/examController.js";
 import {
@@ -28,6 +29,6 @@ examRoutes.route("/exam/questions/random/:examId").get(protect, getRandomQuestio
 examRoutes.route("/cheatingLogs/:examId").get(protect, getCheatingLogsByExamId);
 examRoutes.route("/cheatingLogs/").post(protect, saveCheatingLog);
 examRoutes.route("/cheatingLogs/export/csv").get(protect, exportCheatingLogsCsv);
-examRoutes.route("/exam/:examId").post(protect, DeleteExamById);
+examRoutes.route("/exam/:examId").get(protect, getExamById).post(protect, DeleteExamById);
 
 export default examRoutes;

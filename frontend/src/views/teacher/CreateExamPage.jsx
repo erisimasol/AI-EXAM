@@ -12,6 +12,7 @@ import { GRADIENTS } from 'src/theme/brand';
 
 const examValidationSchema = yup.object({
   examName: yup.string().required('Exam Name is required'),
+  description: yup.string(),
   totalQuestions: yup
     .number()
     .typeError('Total Number of Questions must be a number')
@@ -43,6 +44,7 @@ const CreateExamPage = () => {
 
   const initialExamValues = {
     examName: '',
+    description: '',
     totalQuestions: '',
     duration: '',
     liveDate: '',

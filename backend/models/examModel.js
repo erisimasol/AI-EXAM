@@ -8,6 +8,10 @@ const examSchema = mongoose.Schema(
       type: String,
       required: true,
     },
+    description: {
+      type: String,
+      default: "",
+    },
     totalQuestions: {
       type: Number,
       required: true,

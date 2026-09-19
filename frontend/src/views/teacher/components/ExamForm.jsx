@@ -46,6 +46,22 @@ const CreateExam = ({ formik, title, subtitle, subtext }) => {
 
         <Stack mb={3}>
           <CustomTextField
+            id="description"
+            name="description"
+            label="Description (shown to candidates before they start)"
+            variant="outlined"
+            fullWidth
+            multiline
+            minRows={3}
+            value={values.description}
+            onChange={handleChange}
+            error={touched.description && Boolean(errors.description)}
+            helperText={touched.description && errors.description}
+          />
+        </Stack>
+
+        <Stack mb={3}>
+          <CustomTextField
             id="totalQuestions"
             name="totalQuestions"
             label="Total Number of Questions"
